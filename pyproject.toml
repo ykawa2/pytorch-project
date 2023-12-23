@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "docker-ml-project"
+name = "pytorch-project"
 version = "0.1.0"
-description = "Project template for docker-ml-project"
+description = "Project template for pytorch-project"
 authors = ["ykawa2 <nanda.vov@gmail.com>"]
 readme = "README.md"
 

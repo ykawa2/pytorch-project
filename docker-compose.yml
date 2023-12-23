@@ -2,16 +2,17 @@ version: '3'
 
 services:
   dev:
-    image: docker-ml-project
+    image: pytorch-project
     build:
       context: .
       dockerfile: Dockerfile
       args:
         - BASE_IMAGE=nvcr.io/nvidia/pytorch:23.01-py3
-        - PROJECT_NAME=docker-ml-project
+        - PROJECT_NAME=pytorch-project
         - USE_POETRY=false
     volumes:
-      - ${HOME}/docker-ml-project:/home/docker/docker-ml-project
+      - ${HOME}/my-project/pytorch-project:/home/docker/pytorch-project
+      - ${HOME}/repo_samples/pytorch:/home/docker/pytorch
       - ${HOME}/Datasets:/home/docker/Datasets
     tty: true
     stdin_open: true

@@ -1,5 +1,5 @@
 HOME=/home/docker
-PROJECT_DIR=/home/docker/docker-ml-project
+PROJECT_DIR=/home/docker/pytorch-project
 
 # devcontainer------------------------------------------------------------
 .PHONY: set-prompt

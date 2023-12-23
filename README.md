@@ -1,2 +1,2 @@
-# docker-ml-project
+# pytorch-project
 Docker ML Project Template

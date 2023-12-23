@@ -1,7 +1,7 @@
 ARG BASE_IMAGE
 FROM ${BASE_IMAGE}
 
-ARG PROJECT_NAME=docker-ml-project
+ARG PROJECT_NAME=pytorch-project
 ARG USER_NAME=docker
 ARG GROUP_NAME=docker
 ARG UID=1000

@@ -1,5 +1,5 @@
 {
-  "name": "docker-ml-project",
+  "name": "pytorch-project",
   // Must
   "dockerComposeFile": "../docker-compose.yml",
   // Must
@@ -31,6 +31,6 @@
       "settings": {}
     }
   },
-  "postCreateCommand": "cd docker-ml-project && make set-vscode-settings; make set-prompt; make install-requirements",
+  "postCreateCommand": "cd pytorch-project && make set-vscode-settings; make set-prompt; make install-requirements",
   "shutdownAction": "none"
 }
