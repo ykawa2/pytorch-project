@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  dev:
+    image: docker-ml-project
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BASE_IMAGE=nvcr.io/nvidia/pytorch:23.01-py3
+        - PROJECT_NAME=docker-ml-project
+        - USE_POETRY=false
+    volumes:
+      - ${HOME}/docker-ml-project:/home/docker/docker-ml-project
+      - ${HOME}/Datasets:/home/docker/Datasets
+    tty: true
+    stdin_open: true
+    privileged: true
+    ipc: host
+    network_mode: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]

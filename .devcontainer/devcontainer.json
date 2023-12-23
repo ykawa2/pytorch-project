@@ -1,0 +1,36 @@
+{
+  "name": "docker-ml-project",
+  // Must
+  "dockerComposeFile": "../docker-compose.yml",
+  // Must
+  "service": "dev",
+  // Must? abs path, ~ not worked
+  "workspaceFolder": "/home/docker",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "njpwerner.autodocstring",
+        "streetsidesoftware.code-spell-checker",
+        "formulahendry.code-runner",
+        "rogalmic.bash-debug",
+        "timonwong.shellcheck",
+        "foxundermoon.shell-format",
+        "ms-python.flake8",
+        "GitHub.copilot",
+        "ryanluker.vscode-coverage-gutters",
+        "usernamehw.errorlens",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker"
+      ],
+      "settings": {}
+    }
+  },
+  "postCreateCommand": "cd docker-ml-project && make set-vscode-settings; make set-prompt; make install-requirements",
+  "shutdownAction": "none"
+}
