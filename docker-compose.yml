@@ -14,6 +14,7 @@ services:
       - ${HOME}/my-project/pytorch-project:/home/docker/pytorch-project
       - ${HOME}/repo_samples/pytorch:/home/docker/pytorch
       - ${HOME}/repo_samples/vision:/home/docker/vision
+      - ${HOME}/repo_samples/albumentations:/home/docker/albumentations
       - ${HOME}/Datasets:/home/docker/Datasets
     tty: true
     stdin_open: true
